@@ -1,29 +1,141 @@
+@font-face {
+    font-family: roboto;
+    src: url("fonts/Roboto-Regular.ttf");
+}
+
 body{
+    font-family: roboto;
     margin: 0;
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 6fr;
     grid-template-rows: 1fr 5fr;
 }
 
 .sidebar{
-    background: #38bdf8;
+    background: #0ea5e9;
     grid-area: 1/1/-1/2;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr repeat(10, 0.5fr) 4fr;
+    gap: 10px;
+    place-items: center;
+    padding-left: 10px;
 }
+
+.logo{
+    width: 30px;
+    filter: invert(100%) sepia(10%) saturate(0%) hue-rotate(75deg) brightness(113%) contrast(100%);
+}
+
+#dashboard{
+    width: 40px;
+}
+
+.text{
+    margin-right: auto;
+    font-size: calc(1em + 3px);
+}
+
+.text.dashboard{
+    font-size: 2em;
+}
+
 
 .header{
     grid-area: 1/2/2/-1;
+    background: white;
+    box-shadow: 5px 0px 10px grey;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.top{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.search{
+    display: grid;
+    grid-template-columns: 7% 93%;
+    gap: 10px;
+    align-items: center;
+}
+
+.right{
+    display: grid;
+    grid-template-columns: 40% 10% 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.my_name{
+    font-weight: bold;
+}
+
+.search-field{
+    background-color: #e2e8f0;
+    height: 25px;
+    border: none;
+    border-radius: 20px;
+    /* width: 500px; */
 }
 
 .magnify, .bell{
-    width: 20px;
+    width: 30px;
+    margin-left: auto;
 }
 
-.my_pic{
-    
-    width: 20px;
+.my_pic{    
+    width: 40px;
+    background: orange;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
-.body{
+
+.bottom{
+    display: grid;
+    grid-template-columns: 0.2fr 6fr 1fr 1fr 1fr;
+    align-items: center;
+
+}
+
+.bottom .my_pic{
+    margin-left: 30px;
+    width: 50px;
+    margin-right: 20px;
+}
+.text .text{
+    font-size: 14px;
+}
+
+.bottom button{
+    color: white;
+    width: 100px;
+    height: 30px;
+    background-color: #0ea5e9;
+    border: none;
+    border-radius: 20px;
+}
+
+.content{
     grid-area: 2/2;
-    background: #a3a3a3;
+    background: #e2e8f0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.projects{
+    grid-area: 1/1/-1/2;
+    border: 1px solid red;
+    margin: 30px 15px;
+}
+
+.announcements{
+    grid-area:1/2;
+    border: 1px solid red;
 }
