@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.sidebar{
+    background: #38bdf8;
+    grid-area: 1/1/-1/2;
+}
+
+.header{
+    grid-area: 1/2/2/-1;
+}
+
+.magnify, .bell{
+    width: 20px;
+}
+
+.my_pic{
+    
+    width: 20px;
+}
+.body{
+    grid-area: 2/2;
+    background: #a3a3a3;
+}
